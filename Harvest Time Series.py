@@ -47,6 +47,14 @@ def get_cloudless_timeseries(tile_x, tile_y):
         f.write(f"{date},{totalr},{totalb},{totalg},{totaly}\n")
     f.close()
 
+
+'''
+This function have an input based on images created by getharvestmask() function
+Because the yield of sugarcane is based on difference between the harvested area images i and images i+1
+comparing two images from getharvestmask() function, if the 1st images masked red and the latter
+images is red, then it will not be counted
+'''
+
 def get_real_cloudless_timeseries(tile_x, tile_y):
     f = open(f"data/cloudlesscsvrealharvested/realharvested-{tile_x}-{tile_y}.csv", "w+")
     f.write(f"Date,HarvestedPixelCount \n")
