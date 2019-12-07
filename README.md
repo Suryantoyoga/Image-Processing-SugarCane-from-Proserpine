@@ -9,14 +9,14 @@ Australia, 2018). Additionally, water is one of the major aspects that needs to 
 supporting the industry’s sustainability programs. Irrigation infrastructure and water use efficiency is
 a vital for the increase of productivity and profitability.
 
-### Proposed Solution
+## Proposed Solution
 The aim of the project is to improve the irrigation practices of sugarcane producers using satellite
 intelligence. The irrigation scheduling tool devised uses a land parcel specific, water balance model that can enable
 a farmer to time or schedule irrigation to fulfil their field’s needs. By tailoring the water needs and
 watering times individually to that specific part of cultivated land, we can potentially maximise yield
 while keeping irrigation costs to a minimum.
 
-#### Packages to import
+## Packages to import
 1. Matplotlib
 2. Numpy
 3. Pandas
@@ -24,5 +24,5 @@ while keeping irrigation costs to a minimum.
 5. S2cloudlesspackage (need to import lightgbm and shapely first)
 6. Pickle
 
-##### Methodology 
+## Methodology 
 
