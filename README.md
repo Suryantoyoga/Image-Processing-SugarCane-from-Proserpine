@@ -25,4 +25,16 @@ while keeping irrigation costs to a minimum.
 6. Pickle
 
 ## Methodology 
+1. Get the data : satellite image data, daily rainfall, daily evapotranspiration Proserpine area from Bureau of Meteorology
+2. Prepare the data : Remove cloud outliers, calculate sugarcane yield, and average NDVI value of the farm plots.
+3. Explore and data modelling : Calculate crop evapotranspiration using NDVI value (Research from Sugarcane Australia, 2018), and combining with rainfall dataset to create water balance model
+4. Make Front-End Application : Based on the water balance model, to create irrigation scheduling tools
+
+## Code Explaination
+1. ImageHarvestMask.py is to create masks for sugarcane images, this mask differentiate sugarcane cycle by 3 level, green = growth phase, blue = mature phase, and red = already harvested
+2. HarvestTimeSeries is to calculate masked images and write it to csv files
+3. Sentile.py is code where we store sentile object and helper function 
+4. CreateMaskCalculateNDVI is to create cloud masks, calculate NDVI, and store in form of pickle
+5. pickle2csv.py is to convert pickle file to csv files
+
 
