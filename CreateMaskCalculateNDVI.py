@@ -80,16 +80,17 @@ for tile in tiles:
     i = i + 1
     print(f"Processing tile: {tile_x},{tile_y} - {i} of {len(tiles)}")
     print(dates)
-    #print(my_sentile.get_mean_ndvi_timeseries())
-    ndvi_master.append(my_sentile.get_mean_ndvi_timeseries())
 
-    #Create cloud masks images and save it in cloudmasks folder
-    # for date in dates:
-    #     image_arr = my_sentile.get_image_as_array(date)
-    #     myts_list = list()
-    #     myts_list.append(image_arr)
-    #     cloud_masks = cloud_detector.get_cloud_masks(np.array(myts_list))
-    #     plt.imsave(f"datap2/cloudmasks/cloudmask-x{tile_x}-y{tile_y}-{date}.png", cloud_masks[0], vmin=0, vmax=1, cmap=plt.get_cmap("binary"))
+    #Calculate NDVI, commented this out if you want to create cloudmasks
+    # ndvi_master.append(my_sentile.get_mean_ndvi_timeseries())
+
+    # Create cloud masks images and save it in cloudmasks folder
+    for date in dates:
+        image_arr = my_sentile.get_image_as_array(date)
+        myts_list = list()
+        myts_list.append(image_arr)
+        cloud_masks = cloud_detector.get_cloud_masks(np.array(myts_list))
+        plt.imsave(f"datap2/cloudmasks/cloudmask-x{tile_x}-y{tile_y}-{date}.png", cloud_masks[0], vmin=0, vmax=1, cmap=plt.get_cmap("binary"))
 
 
     for date in dates:
