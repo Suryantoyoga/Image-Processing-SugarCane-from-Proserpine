@@ -37,4 +37,7 @@ while keeping irrigation costs to a minimum.
 4. CreateMaskCalculateNDVI is to create cloud masks, calculate NDVI, and store in form of pickle
 5. pickle2csv.py is to convert pickle file to csv files
 
+
+
+
 NB: Big thanks for Riley J Hughes for his contribution on this code!
